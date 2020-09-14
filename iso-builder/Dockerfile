@@ -3,7 +3,7 @@ MAINTAINER Joseph Lee <development@jc-lab.net>
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY ["mirror.txt", "/tmp/mirror.txt"]
+COPY ["build/mirror.txt", "/tmp/mirror.txt"]
 RUN APT_REPO=$(cat /tmp/mirror.txt | head -n 1) && \
     echo "APT_REPO: $APT_REPO" && \
     echo "\n\
